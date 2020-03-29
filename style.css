@@ -1,0 +1,15 @@
+h1, h2, h3 {
+  font-family: Lato;
+  color: orangered;
+}
+body {
+  color: white;
+}
+body {
+  background-color: #3f4244;
+  }
+@mediaprint{
+  .pagebreak{ 
+    page-break-before: always;
+    }
+}
