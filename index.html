@@ -4,66 +4,39 @@
 Url : <a href="https://07mbig-agsem.stackblitz.io/"><font color="FFFFFF">https://07mbig-agsem.stackblitz.io/</font><a/></br>
 Url : <a href="https://github.com/76roliver76/07mbig-agsem"><font color="FFFFFF">https://github.com/76roliver76/07mbig-agsem</font><a/>
 </h3>
-El objetivo de este trabajo es buscar la relación entre las pandemias del año 2003 SARS y la actual del COVID-19 en el 2020 en Australia, teniendo en cuenta datos de temperatura. Este estudio está motivado por la peculidaridad del momento y la discusión actual sobre si las variaciones de temperatura afectan a los virus de la familia coronavirus y, tal como afirman algunos expertos, las cubiertas de lípidos de estos virus se ven afectadas por las temperaturas elevadas, con lo que su capacidad de infección desciende con el aumento de las temperaturas. </br></br>
+El objetivo de este trabajo de visualización es buscar alguna, si es que existe, entre las curvas de contagios de COVID-19 y las variables meteorológicas de temperatura y humedad. Para ello he elegido datos disponibles para Sydney (Australia), Tehran (Irán), Milán (Italia) y Sao Paulo (Brasil). De esta forma tenemos lugares con distintos climas en el mismo momento de la pandemia. La elección de estos lugares viene modivada por varios factores: </br>
+           - Ciudades de gran densidad poblacional. </br>
+           - Diversidad climática.</br>
+           - Emergencia de la pandemia en el mes de Marzo 2020.</br>
+</br>
+Las fuentes consultadas son: </br></br>
+          - Proyecto SILO, el cual nos suministra datos fiables de múltiples estaciones meteorológicas en Australia.<a href="https://www.longpaddock.qld.gov.au/silo"><font color="FFFFFF"> https://www.longpaddock.qld.gov.au/silo</font></a>. </br></br>
+          - COVID-19 CSSEGISandData GitHub John Hopking University<a href="https://github.com/CSSEGISandData/COVID-19"><font color="FFFFFF">https://github.com/CSSEGISandData/COVID-19</font></a>.</br></br>
+          - Datos meteorológicos wunderground <a href="https://www.wunderground.com/"><font color="FFFFFF"> https://www.wunderground.com/</font></a> y meteostat <a href="https://meteostat.net/en/station/40754?t=2020-01-01/2020-04-15"><font color="FFFFFF"> https://meteostat.net/en/station/40754?t=2020-01-01/2020-04-15</font></a></br></br>
 
-Para ello se han consultado fuentes del gobierno de Australia, el proyecto SILO, el cual nos suministra datos fiables de múltiples estaciones meteorológicas. <a href="https://www.longpaddock.qld.gov.au/silo"><font color="FFFFFF"> https://www.longpaddock.qld.gov.au/silo</font></a>. En concreto se ha elegido la estación meteorológica del jardín botánico de Sydney por varias razones: está en una zona urbana para no infuenciada por carreteras ni edificicios que puedan elevar los valores. Se ha elegido Sydney como representación de una gran ciudad de Australia y de densidad de población elevada, por tanto, el mejor de los casos para representar la infectividad de un virus. La zona sureste de Australia es la más poblada del continente, por tanto, la más representativa para este estudio. </br></br>
+Extraer conclusiones de estos datos es francamente complicado y graficarlos de una manera que se pueda extraer algo de conocimiento también, de esta manera, tras múltiples pruebas y tipos de representación, he optado por simplicar y graficar para cada País los casos declarados de contagiados de COVID-19 conjuntamente con la ciudad de ese País de inició el contagio y que tuviera más población, en estos casos: Australia - Sydney, Irán - Tehran, Italia - Milán y Brasil - Sao Paulo. </br></br>
 
-Para los datos de infecciones de las pandemias se han obtenido los dataset de SARS 2003 de la web de la OMS (WHO) <a href="https://www.who.int/csr/sars/country/en/"><font color="FFFFFF">https://www.who.int/csr/sars/country/en/</font></a> así como los datos disponibles a día 29-03-2020 sobre la expansión del COVID-19 desde la web de human data <a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases"><font color="FFFFFF">https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases</font></a>
+Para cada ciudad he obtenido de las fuentes mencionadas las temperaturas medias y humedad para cada día del presente año 2020 y graficado conjuntamente el número de casos COVID-19 y dichas variables meteorológicas. </br></br>
+
+Sin analizar otros aspectos como densidad poblacional, medidas de confinamiento tempranas, ubicación geográfica u otros parámetros que pudieran influir en el análisis que nos preocupa, de estas representaciones se puede extraer que la tasa de contagio por COVID-19 se ralentiza en un factor considerable cuando las temperaturas son superiores a 20ºC. La humedad también puede tener que ver en la ralentización de la tasa de contagio pues en las ciudades en las que se expande con mayor rapidez la humedad relativa es notablemente más baja. Esta es una conclusión atrevida con los pocos datos analizados, si bien, se entiende la limitación de este trabajo al uso de las herramientas de visualización tratadas en la asignatura. </br></br>
+
+En este caso se ha importado en Google Sheet los datos contagios directamente desde Github. También se ha creado otra Sheet para los datos meteorológicos y se han conectado en Tableu Desktop. Mediante uniones de dataset en Tableu he creado un único dataset y representado las gráficas que se muestran a continuación publicando en Public Tableu los dos Dashboards. Estos son los Google Sheet utilizados. </br></br>
+- <a href="https://docs.google.com/spreadsheets/d/1rafwJuM7CdOW8ZBS2ANhv0V2n6q1hcj0cDW9pAPzhyU/edit?usp=sharing"><font color="FFFFFF"> Meteo data</font></a> </br>
+- <a href="https://docs.google.com/spreadsheets/d/1XXATfJlSV4dFZA_EGZVZzZHNOVzey2s0GYIYJyKlrOU/edit?usp=sharing"><font color="FFFFFF"> COVID-19 data</font></a> </br>
 
 <table style="width:100%">
   <tr>
-    <td>
-      <h2>Emisiones - Grafico 1 - Pie</h2>
-      Grafico de tarta. Emisiones de CO2 por país. 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHxDF1BskfHloaR3jKwA-khNvAvifDUd7rnj2HJeXvdCCycVy3t1ugufsFP8dAbjkl8CCtbtTyBiT5/pubchart?oid=173518209&amp;format=interactive"></iframe>
-    </td>
-    <td>
-<h2>Emisiones - Grafico 2 - Donut</h2>
-Grafico de donut. Emisiones de CO2 por país. 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHxDF1BskfHloaR3jKwA-khNvAvifDUd7rnj2HJeXvdCCycVy3t1ugufsFP8dAbjkl8CCtbtTyBiT5/pubchart?oid=2073110352&amp;format=interactive"></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h2>Emisiones - Grafico 3 - Columnas</h2>
-      Grafico de Columnas. Emisiones de CO2 por país. </br></br>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHxDF1BskfHloaR3jKwA-khNvAvifDUd7rnj2HJeXvdCCycVy3t1ugufsFP8dAbjkl8CCtbtTyBiT5/pubchart?oid=864363019&amp;format=interactive"></iframe>
-    </td>
-    <td>
-      <h2>Emisiones - Grafico 4 - Combo</h2>
-      Gráfico combo, múltiples variables. Mostrando emisiones por país, población, GDP,</br> emisiones x GDP, emisiones x cápita.
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHxDF1BskfHloaR3jKwA-khNvAvifDUd7rnj2HJeXvdCCycVy3t1ugufsFP8dAbjkl8CCtbtTyBiT5/pubchart?oid=205754337&amp;format=interactive"></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td><div class="pagebreak"></div>
-      <h2> DataWrapper - Grafico dispersión</h2>
-<iframe title="Emisiones CO2" width="600" height="371" style="background: #FFFFFF;"  aria-label="Scatter Plot" id="datawrapper-chart-OUa6H" src="//datawrapper.dwcdn.net/OUa6H/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
-</script>
-      </td>
-      <td>
-        <h2> DataWrapper - Grafico de columnas por continentes</h2>
-        <iframe title="Emisiones CO2 y Continente" width="600" height="371" style="background: #FFFFFF;" aria-label="Bar Chart" src="//datawrapper.dwcdn.net/MRIMv/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="403"></iframe>
-        </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <h2>07MBIG - Visualización – AG2 - Embedded Tableau Public Dashboards </h2>    
-        <h3>Nombre:<font color="FFFFFF"> Rafael Oliver Rotger</font></br>
-        Url : <a href="https://07mbig-ag1.stackblitz.io/"><font color="FFFFFF">https://07mbig-ag1.stackblitz.io/</font><a/></br>
-        Url : <a href="https://github.com/76roliver76/07mbig-ag1"><font color="FFFFFF">https://github.com/76roliver76/07mbig-ag1</font><a/>
-        </h3>    
+      <td colspan="2">   
         <div align="center">
-          Dashboard interactivo AG2 publicado en Tableau Public.
-        <div class='tableauPlaceholder' id='viz1584560370036' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-AG2&#47;Dashboard-AG2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dashboard-AG2&#47;Dashboard-AG2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-AG2&#47;Dashboard-AG2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1584560370036');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        </div>
+          Dashboard interactivo AG-Sem Tableau Public. Países contagio contenido. BRAZIL - AUSTRALIA
+<div class='tableauPlaceholder' id='viz1587201420535' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;07&#47;07MBIG-AGSem-AUS-BRZ&#47;Australia-Brazil&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='07MBIG-AGSem-AUS-BRZ&#47;Australia-Brazil' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;07&#47;07MBIG-AGSem-AUS-BRZ&#47;Australia-Brazil&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587201420535');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
         </td>
       </tr>
       <tr>
       <td colspan="2">            
-        <div align="center" ></br></br>
-        Dashboard interactivo AG2 publicado en Tableau Public - Gráfico de dispersión burbujas por presupuesto y género.
-        <div class='tableauPlaceholder' id='viz1584560431944' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DispersionBurbujasAG2&#47;DispersinBurbujasAG2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DispersionBurbujasAG2&#47;DispersinBurbujasAG2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DispersionBurbujasAG2&#47;DispersinBurbujasAG2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1584560431944');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+        <div align="center">
+          Dashboard interactivo AG-Sem Tableau Public. Países alta tasa contagio. IRAN - ITALIA 
+<div class='tableauPlaceholder' id='viz1587201483299' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;07&#47;07MBIG-AGSem-IRN-IT&#47;Irn-Italia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='07MBIG-AGSem-IRN-IT&#47;Irn-Italia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;07&#47;07MBIG-AGSem-IRN-IT&#47;Irn-Italia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587201483299');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
       </td>
       </tr>
 </table>
